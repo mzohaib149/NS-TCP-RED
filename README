@@ -1,0 +1,28 @@
+To run the script
+
+ns [RED|Droptail] [1|2]
+
+It creates output_[RED|DROPTAIL]_[1|2] depending on one of the six combinations for which it is run
+
+The format of these output files is:
+
+Time for calculation: 1 sec
+Now: 180 sec 
+Number of bytes received at sink1: 
+Throughput at sink1:  kbps
+Number of bytes received at sink2: 
+Throughput at sink2: kbps
+It also displays at console: 
+
+"Throughput at sink1: [expr $bw1] kbps"
+"Throughput at sink2: [expr $bw2] kbps"	
+"Throughput at sink3: [expr $bw3] kbps"
+
+
+
+It also creates output files [DROPTAIL|RED]_[1|2]_[average|instantaneous]_sink[1|2|3].tr
+
+These files record time and average and instantaneous bandwidth at sink1, sink2 and sink3 (if available) starting for t=30 to 180sec in intervals of 1 sec.
+This file is then used as input for Xgraph to plot time vs. average throughput and time vs. instantaneous throughput for all sinks in a graph. 
+
+
